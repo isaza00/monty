@@ -1,9 +1,18 @@
 #include "monty.h"
-void read_line(char *monty_file)
-{
-	char *buffer;
-	size_t size = 0;
 
-	getline(&buffer, &size, monty_file);
-	printf("%s", getline(&buffer, &size, monty_file));
+int read_line(FILE *monty_file)
+{
+	char data[1024];
+
+	command = NULL, param = NULL;
+	if (fgets(data, 1024, monty_file))
+	{
+		command = strtok(data, SEPARATORS);
+		if (!command)
+			return (1);
+		if (strcmp(command, "push") == 0)
+			param = strtok(NULL, SEPARATORS);
+		return (1);
+	}
+	return (0);
 }

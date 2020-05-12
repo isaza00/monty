@@ -1,7 +1,27 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+/* MACROS */
+#define SEPARATORS " \n\t"
+
+/* GLOBAL VARIABLES */
+extern char *command;
+extern char *param;
+extern int count_lines;
+
+/* PROTOTYPES */
+int read_line(FILE *monty_file);
+void monty_function();
+
+/* STRUCTURES */
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -31,9 +51,5 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-/*extern int count_line;*/
-/*extern FILE *monty_file = NULL;*/
-/*extern char *instruct;
-extern char *num;*/
-void read_line(char *monty_file);
+
 #endif /* MONTY_H*/
