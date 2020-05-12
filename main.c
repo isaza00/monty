@@ -1,13 +1,34 @@
 #include "monty.h"
 
+
 char *command = NULL;
 char *param = NULL;
-int count_lines = 0;
+
+/**
+ * print_dlistint - print double linked list
+ * @h: pointer to hed
+ * Return: number of nodes
+ */
+size_t print_dlistint(stack_t *h)
+{
+	size_t i = 0;
+
+	while (h)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+		i++;
+	}
+	return (i);
+}
+
 
 int main(int argc, char *argv[])
 {
 	FILE *monty_file;
 	int line = 1;
+	unsigned int count_lines = 0;
+	stack_t *node = NULL;
 
 	if (argc != 2)
 	{
@@ -23,14 +44,12 @@ int main(int argc, char *argv[])
 	while (line == 1)
 	{
 		line = read_line(monty_file);
-		printf("command = %s and param = %s\n", command, param); 
-		monty_function();
+		printf("%i\n", count_lines);
+		printf("command = %s and param = %s\n", command, param);
+		/*monty_function(&node, count_lines);*/
+		print_dlistint(node);
 		count_lines++;
 	}
-	
-
-	
-	
 	pclose(monty_file);
 	return (0);
 }
