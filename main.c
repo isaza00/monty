@@ -43,12 +43,15 @@ int main(int argc, char *argv[])
 	}
 	while (line == 1)
 	{
-		line = read_line(monty_file);
-		printf("%i\n", count_lines);
-		printf("command = %s and param = %s\n", command, param);
-		/*monty_function(&node, count_lines);*/
-		print_dlistint(node);
 		count_lines++;
+		line = read_line(monty_file);
+		if (!command)
+			break;
+		printf("line number: %i\n", count_lines);
+		printf("command = %s and param = %s\n", command, param);
+		monty_function(&node, count_lines);
+		printf("lista :\n");
+		print_dlistint(node);		
 	}
 	pclose(monty_file);
 	return (0);

@@ -19,12 +19,10 @@ void monty_function(stack_t **node, unsigned int count_lines)
 		{"pstr", m_pstr},*/
 		{NULL, NULL}
 	};
-	printf("monty function\n");
 	for (i = 0; valid_com[i].opcode; i++)
 	{
 		if(strcmp(valid_com[i].opcode, command) == 0)
 		{
-			printf("Encuentra push%s\n", valid_com[i].opcode);
 			valid_com[i].f(node, count_lines);
 
 		}

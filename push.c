@@ -21,8 +21,10 @@ void m_push(stack_t **node, unsigned int line_count)
 	int num;
 
 	if (!param)
+	{
 		dprintf(2, "L%u: usage: push integer\n", line_count);
 		exit(EXIT_FAILURE);
+	}
 	num = check_digit(line_count);
 	printf("num %i\n", num);
 	if (!add_node(node, num))
