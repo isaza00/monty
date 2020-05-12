@@ -15,11 +15,8 @@
 /* GLOBAL VARIABLES */
 extern char *command;
 extern char *param;
-extern int count_lines;
 
-/* PROTOTYPES */
-int read_line(FILE *monty_file);
-void monty_function();
+
 
 /* STRUCTURES */
 /**
@@ -51,5 +48,11 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/* PROTOTYPES */
+int read_line(FILE *monty_file);
+void monty_function(stack_t **node, unsigned int count_lines);
+stack_t *add_node(stack_t **head, const int n);
+void m_push(stack_t **node, unsigned int line_count);
 
 #endif /* MONTY_H*/
