@@ -1,5 +1,5 @@
 #include "monty.h"
-void monty_function(stack_t **node, unsigned int count_lines)
+void monty_function(char *operator, stack_t **node, unsigned int count_lines)
 {
 	size_t i;
 
@@ -21,7 +21,7 @@ void monty_function(stack_t **node, unsigned int count_lines)
 	};
 	for (i = 0; valid_com[i].opcode; i++)
 	{
-		if(strcmp(valid_com[i].opcode, command) == 0)
+		if(strcmp(valid_com[i].opcode, operator) == 0)
 		{
 			valid_com[i].f(node, count_lines);
 
