@@ -57,5 +57,7 @@ size_t print_rev(stack_t *h);
 void m_pint(stack_t **node, unsigned int line_count);
 size_t print(stack_t *h);
 void free_all(void);
+void m_swap(stack_t **head, unsigned int count_lines);
+void m_nop(stack_t **head, unsigned int count_lines);
 
 #endif /* MONTY_H*/
