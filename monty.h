@@ -54,5 +54,8 @@ int read_line(FILE *monty_file);
 void monty_function(stack_t **node, unsigned int count_lines);
 stack_t *add_node(stack_t **head, const int n);
 void m_push(stack_t **node, unsigned int line_count);
+size_t print_rev(stack_t *h);
+void m_pint(stack_t **node, unsigned int line_count);
+size_t print(stack_t *h);
 
 #endif /* MONTY_H*/

@@ -9,19 +9,6 @@ char *param = NULL;
  * @h: pointer to hed
  * Return: number of nodes
  */
-size_t print_dlistint(stack_t *h)
-{
-	size_t i = 0;
-
-	while (h)
-	{
-		printf("%d\n", h->n);
-		h = h->next;
-		i++;
-	}
-	return (i);
-}
-
 
 int main(int argc, char *argv[])
 {
@@ -29,7 +16,6 @@ int main(int argc, char *argv[])
 	int line = 1;
 	unsigned int count_lines = 0;
 	stack_t *node = NULL;
-
 	if (argc != 2)
 	{
 		dprintf(2, "USAGE: monty file\n");
@@ -51,8 +37,9 @@ int main(int argc, char *argv[])
 		printf("command = %s and param = %s\n", command, param);
 		monty_function(&node, count_lines);
 		printf("lista :\n");
-		print_dlistint(node);		
+		print(node);		
 	}
 	pclose(monty_file);
+
 	return (0);
 }
