@@ -12,7 +12,7 @@ void m_add(stack_t **head, unsigned int line_count)
 
 	if (!head || !(*head) || !(*head)->next)
 	{
-		printf("L%u: can't add, stack too short\n", line_count);
+		dprintf(2, "L%u: can't add, stack too short\n", line_count);
 		free_all();
 		exit(EXIT_FAILURE);
 	}

@@ -45,6 +45,4 @@ void m_push(stack_t **node, unsigned int line_count)
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-	if (*node)
-		printf("n = %i\n", (*node)->n);
 }
