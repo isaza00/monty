@@ -12,7 +12,7 @@ void m_swap(stack_t **head, unsigned int count_lines)
 
 	if (!head || !(*head) || !(*head)->next)
 	{
-		printf("L%u: can't swap, stack too short\n", count_lines);
+		dprintf(2, "L%u: can't swap, stack too short\n", count_lines);
 		exit(EXIT_FAILURE);
 	}
 
