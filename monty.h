@@ -12,10 +12,6 @@
 /* MACROS */
 #define SEPARATORS " \n\t"
 
-/* GLOBAL VARIABLES */
-extern char *command;
-extern char *param;
-
 
 
 /* STRUCTURES */
@@ -49,13 +45,17 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/* GLOBAL VARIABLES */
+
+
 /* PROTOTYPES */
-int read_line(FILE *monty_file);
+int *read_line(FILE *monty_file);
 void monty_function(stack_t **node, unsigned int count_lines);
 stack_t *add_node(stack_t **head, const int n);
 void m_push(stack_t **node, unsigned int line_count);
 size_t print_rev(stack_t *h);
 void m_pint(stack_t **node, unsigned int line_count);
 size_t print(stack_t *h);
+void free_all(stack_t **node);
 
 #endif /* MONTY_H*/

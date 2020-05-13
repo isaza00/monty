@@ -1,10 +1,11 @@
 #include "monty.h"
 
-int read_line(FILE *monty_file)
+int *read_line(FILE *monty_file)
 {
 	char data[1024];
+	char *command = NULL;
+	char *param = NULL;
 
-	command = NULL, param = NULL;
 	if (fgets(data, 1024, monty_file))
 	{
 		command = strtok(data, SEPARATORS);
