@@ -10,7 +10,7 @@
 #include <string.h>
 
 /* MACROS */
-#define SEPARATORS " \n\t"
+#define SEPARATORS " \n\t\r"
 
 
 
@@ -46,16 +46,16 @@ typedef struct instruction_s
 } instruction_t;
 
 /* GLOBAL VARIABLES */
-
+extern stack_t **global_free;
 
 /* PROTOTYPES */
-int *read_line(FILE *monty_file);
-void monty_function(stack_t **node, unsigned int count_lines);
+int read_line(FILE *monty_file);
+void monty_function(char *operator, stack_t **node, unsigned int count_lines);
 stack_t *add_node(stack_t **head, const int n);
 void m_push(stack_t **node, unsigned int line_count);
 size_t print_rev(stack_t *h);
 void m_pint(stack_t **node, unsigned int line_count);
 size_t print(stack_t *h);
-void free_all(stack_t **node);
+void free_all(void);
 
 #endif /* MONTY_H*/

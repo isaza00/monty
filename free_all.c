@@ -1,16 +1,11 @@
 #include "monty.h"
-/**
- * m_pint - pint is print stack backwards
- * @node: pointer to head
- * @line_count: current line number
- * Return: void function
- */
-void free_all(stack_t **node)
-{
-	stack_t *temp = NULL;
-	stack_t *node_free;
 
-	node_free = *node;
+void free_all(void)
+{
+	stack_t *node_free;
+	stack_t *temp = NULL;
+
+	node_free = *global_free;
 
 	while (node_free)
 	{
@@ -19,4 +14,3 @@ void free_all(stack_t **node)
 		node_free = temp;
 	}
 }
-
