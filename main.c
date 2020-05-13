@@ -3,9 +3,10 @@
 stack_t **global_free;
 
 /**
- * print_dlistint - print double linked list
- * @h: pointer to hed
- * Return: number of nodes
+ * main - monty interpreter
+ * @argc: number of agruments
+ * @argv: name of file in argv[1]
+ * Return: return success if interpreter worked
  */
 
 int main(int argc, char *argv[])

@@ -1,7 +1,9 @@
 push 8
-push 3
-push 1
-pint
-
-
+push 7
 push 6
+pall
+push 5
+pall
+pop
+pall
+
