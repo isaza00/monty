@@ -14,7 +14,5 @@ void m_pint(stack_t **node, unsigned int line_count)
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-        
-        printf("printing pint: \n");
         printf("%d\n", (*node)->n);
 }

@@ -31,11 +31,12 @@ void m_push(stack_t **node, unsigned int line_count)
 		exit(EXIT_FAILURE);
 	}
 	num = check_digit(param, line_count);
-	printf("num %i\n", num);
 	if (!add_node(node, num))
 	{
 		dprintf(2, "Error: malloc failed\n");
 		free_all();
 		exit(EXIT_FAILURE);
 	}
+	if (*node)
+		printf("n = %i\n", (*node)->n);
 }

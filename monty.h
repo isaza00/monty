@@ -59,5 +59,8 @@ size_t print(stack_t *h);
 void free_all(void);
 void m_swap(stack_t **head, unsigned int count_lines);
 void m_nop(stack_t **head, unsigned int count_lines);
+void m_pall(stack_t **node, unsigned int line_count);
+int delete_node(stack_t **head, unsigned int index);
+void m_pop(stack_t **head, unsigned int line_count);
 
 #endif /* MONTY_H*/
