@@ -5,9 +5,9 @@ void monty_function(stack_t **node, unsigned int count_lines)
 
 	instruction_t valid_com[] = {
 		{"push", m_push},
-		/*{"pall", m_pall},
+		/*{"pall", m_pall},*/
 		{"pint", m_pint},
-		{"pop", m_pop},
+		/*{"pop", m_pop},
 		{"swap", m_swap},
 		{"add", m_add},
 		{"add", m_add},
