@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * add_dnodeint - add node at begining of double linked list
+ * add_node - add node at begining of double linked list
  * @head: pointer to hed
  * @n: integer
  * Return: number of nodes

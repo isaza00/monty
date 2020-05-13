@@ -62,5 +62,6 @@ void m_nop(stack_t **head, unsigned int count_lines);
 void m_pall(stack_t **node, unsigned int line_count);
 int delete_node(stack_t **head, unsigned int index);
 void m_pop(stack_t **head, unsigned int line_count);
+void m_add(stack_t **head, unsigned int line_count);
 
 #endif /* MONTY_H*/

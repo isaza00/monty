@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-	
 	while (getline(&dataptr, &size, monty_file) != -1)
 	{
 		count_lines++;

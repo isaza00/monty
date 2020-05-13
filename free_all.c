@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * free_all - function for free
+ */
 void free_all(void)
 {
 	stack_t *node_free;

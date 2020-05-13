@@ -8,11 +8,11 @@
  */
 void m_pint(stack_t **node, unsigned int line_count)
 {
-        if (!*node || !node)
+	if (!*node || !node)
 	{
 		dprintf(2, "L%u: usage: can't pint, stack empty\n", line_count);
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-        printf("%d\n", (*node)->n);
+	printf("%d\n", (*node)->n);
 }
