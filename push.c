@@ -1,10 +1,15 @@
 #include "monty.h"
-
+/**
+ * check_digit - check if string is a number
+ * @param: param to push
+ * @line_count: current line number
+ * Return: number
+ */
 int check_digit(char *param, unsigned int line_count)
 {
 	int num;
-	num = atoi(param);
 
+	num = atoi(param);
 	if (num == 0 && strcmp(param, "0") != 0)
 	{
 		dprintf(2, "L%u: usage: push integer\n", line_count);
@@ -12,11 +17,14 @@ int check_digit(char *param, unsigned int line_count)
 		exit(EXIT_FAILURE);
 	}
 	return (num);
-	/*for (i = 0; param[i]; i++)*/
-
-		/*if (param[i] == '-' && i == 0)
-	}*/
 }
+
+/**
+ * m_push - it pushes an element to the stack.
+ * @node: pointer to head
+ * @line_count: current line number
+ * Return: void function
+ */
 void m_push(stack_t **node, unsigned int line_count)
 {
 	int num;

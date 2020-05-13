@@ -6,18 +6,18 @@
  */
 size_t print_rev(stack_t *h)
 {
-        size_t i = 0;
+	size_t i = 0;
 
-        while (h->next)
-        {
-                h = h->next;
-        }
-        printf("ultimo nodo: %i\n", h->n);
-        while (h)
-        {
-                printf("n: %d\n", h->n);
-                h = h->prev;
-                i++;
-        }
-        return (i);
+	while (h->next)
+	{
+		h = h->next;
+	}
+	printf("ultimo nodo: %i\n", h->n);
+	while (h)
+	{
+		printf("n: %d\n", h->n);
+		h = h->prev;
+		i++;
+	}
+	return (i);
 }
