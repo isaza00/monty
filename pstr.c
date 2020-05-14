@@ -10,10 +10,6 @@ void m_pstr(stack_t **node, __attribute__((unused)) unsigned int line_count)
 {
 	stack_t *temp = *node;
 
-	if (!*node || !node)
-	{
-		putchar('\n');
-	}
 	while (temp && (temp->n != 0) && ((temp->n) > 32) && ((temp->n) < 128))
 	{
 		printf("%c", temp->n);
