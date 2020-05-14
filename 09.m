@@ -1,6 +1,11 @@
-push 25
-push 10
-pall
-        #holi
-mod 
-pall
+
+push 110
+push 111
+push 116
+push 114
+push 101
+push 98
+push 108
+push 111
+push 72
+pchar
