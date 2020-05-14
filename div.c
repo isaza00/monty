@@ -18,12 +18,12 @@ void m_div(stack_t **head, unsigned int line_count)
 	}
 	temp = *head;
 
-        if (temp->n == 0)
-        {
-                dprintf(2, "L%u: division by zero\n", line_count);
+	if (temp->n == 0)
+	{
+		dprintf(2, "L%u: division by zero\n", line_count);
 		free_all();
 		exit(EXIT_FAILURE);
-        }
+	}
 	valor = temp->next->n / temp->n;
 	m_pop(head, line_count);
 	m_pop(head, line_count);

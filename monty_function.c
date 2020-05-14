@@ -21,7 +21,8 @@ void monty_function(char *operator, stack_t **node, unsigned int count_lines)
 		{"div", m_div},
 		{"mod", m_mod},
 		{"mul", m_mul},
-		/*{"#", m_hash},
+		/*
+		*{"#", m_hash},
 		*{"pchar", m_pchar},
 		*{"pstr", m_pstr},
 		*/

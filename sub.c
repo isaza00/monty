@@ -18,7 +18,7 @@ void m_sub(stack_t **head, unsigned int line_count)
 	}
 	temp = *head;
 
-	valor = temp->n - temp->next->n;
+	valor = temp->next->n - temp->n;
 	m_pop(head, line_count);
 	m_pop(head, line_count);
 	add_node(head, valor);
