@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	{
 		count_lines++;
 		operator = strtok(dataptr, SEPARATORS);
-		if (operator != NULL)
+		if (operator != NULL && operator[0] != '#')
 			monty_function(operator, &node, count_lines);
 	}
 	pclose(monty_file);
