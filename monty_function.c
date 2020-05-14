@@ -17,11 +17,11 @@ void monty_function(char *operator, stack_t **node, unsigned int count_lines)
 		{"pop", m_pop},
 		{"swap", m_swap},
 		{"add", m_add},
-		/*
-		*{"sub", m_sub},
-		*{"div", m_div},
-		*{"mod", m_mod},
-		*{"#", m_hash},
+		{"sub", m_sub},
+		{"div", m_div},
+		{"mod", m_mod},
+		{"mul", m_mul},
+		/*{"#", m_hash},
 		*{"pchar", m_pchar},
 		*{"pstr", m_pstr},
 		*/
