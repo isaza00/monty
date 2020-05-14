@@ -11,7 +11,7 @@ void m_pop(stack_t **head, unsigned int line_count)
 
 	if (!(*head) || !head)
 	{
-		dprintf(2, "L%u: usage: can't pop an empty stack\n", line_count);
+		dprintf(2, "L%u: can't pop an empty stack\n", line_count);
 		free_all();
 		exit(EXIT_FAILURE);
 	}
