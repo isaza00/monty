@@ -23,7 +23,7 @@ void monty_function(char *operator, stack_t **node, unsigned int count_lines)
 		{"mul", m_mul},
 		{"pchar", m_pchar},
 		{"pstr", m_pstr},
-		{"rot1", m_rot1},
+		{"rotl", m_rotl},
 		{"rotr", m_rotr},
 		{"nop", m_nop},
 		{NULL, NULL}
