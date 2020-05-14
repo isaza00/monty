@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * m_rotl - rotates the stack to the bottom
+ * m_rotr - rotates the stack to the bottom
  * @head: double pointer to the begining of the list
  * @line_count: script line number
  */
