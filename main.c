@@ -1,6 +1,6 @@
 #include "monty.h"
 
-stack_t **global_free;
+global_t global = {NULL, NULL}; 
 
 /**
  * main - monty interpreter
@@ -8,17 +8,16 @@ stack_t **global_free;
  * @argv: name of file in argv[1]
  * Return: return success if interpreter worked
  */
-
 int main(int argc, char *argv[])
 {
 	FILE *monty_file;
 	/*int line = 1;*/
 	unsigned int count_lines = 0;
-	char *dataptr = NULL, *operator = NULL;
+	char *operator = NULL;
 	size_t size = 0;
 	stack_t *node = NULL;
 
-	global_free = &node;
+	global.global_free = &node;
 	if (argc != 2)
 	{
 		dprintf(2, "USAGE: monty file\n");
@@ -32,16 +31,16 @@ int main(int argc, char *argv[])
 		free_all();
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&dataptr, &size, monty_file) != -1)
+	while (getline(&(global.dataptr), &size, monty_file) != -1)
 	{
 		count_lines++;
-		operator = strtok(dataptr, SEPARATORS);
+		operator = strtok(global.dataptr, SEPARATORS);
 		if (operator != NULL)
 			monty_function(operator, &node, count_lines);
 	}
 	pclose(monty_file);
-	if (dataptr)
-		free(dataptr);
+	if (global.dataptr)
+		free(global.dataptr);
 	free_all();
 	return (0);
 }

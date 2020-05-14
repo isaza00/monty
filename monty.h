@@ -45,8 +45,24 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+
+
+/**
+ * struct global_var - contains global variables
+ * @dataptr: points to the string read by getline
+ * @global_free: points to the head of stack
+ *
+ * Description: use as global variable
+ * for stack, queues, LIFO, FIFO Holberton project
+ */
+typedef struct global_var
+{
+        char *dataptr; 
+        stack_t **global_free;
+} global_t;
+
 /* GLOBAL VARIABLES */
-extern stack_t **global_free;
+extern global_t global;
 
 /* PROTOTYPES */
 int read_line(FILE *monty_file);
