@@ -69,7 +69,7 @@ void m_div(stack_t **head, unsigned int line_count);
 void m_mod(stack_t **head, unsigned int line_count);
 void m_pchar(stack_t **head, unsigned int line_count);
 void m_pstr(stack_t **head, unsigned int line_count);
-void m_rot1(stack_t **head, unsigned int line_count);
+void m_rotl(stack_t **head, unsigned int line_count);
 void m_rotr(stack_t **head, unsigned int line_count);
 
 #endif /* MONTY_H*/
