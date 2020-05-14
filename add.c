@@ -2,7 +2,7 @@
 /**
  * m_add - adds the top and the second element of the stack
  * @head: pointer to head
- * @count_lines: current line number
+ * @line_count: current line number
  * Return: void function
  */
 void m_add(stack_t **head, unsigned int line_count)
