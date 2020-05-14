@@ -33,7 +33,10 @@ void monty_function(char *operator, stack_t **node, unsigned int count_lines)
 		if (strcmp(valid_com[i].opcode, operator) == 0)
 		{
 			valid_com[i].f(node, count_lines);
-
+			return;
 		}
 	}
+	dprintf(2, "L%u: unknown instruction %s\n", count_lines, operator);
+	free_all();
+	exit(EXIT_FAILURE);
 }
